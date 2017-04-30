@@ -16,6 +16,12 @@ docker pull tobert/cassandra
 mkdir /srv/cassandra
 docker run -d -v /srv/cassandra:/data tobert/cassandra
 ```
+Here are the commands that works for me:
+docker run -d -v /srv/cassandra  tobert/cassandra:latest // /srv/cassandra is valid path in docker container
+docker ps // this can get the container id for below use
+docker exec -it 5ed8b5ad60c1 bash // this is to enter the command line of the container
+// once in the container command line, we can run all commands, including cqlsh and nodetool. Cassandra folder is /opt/apache-cassandra-2.1.7
+
 
 The above commands will run Cassandra in the default Docker networking with
 the standard ports mapped. If you don't care about the data (e.g. for testing)
