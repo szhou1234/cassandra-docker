@@ -93,7 +93,7 @@ It's a simple process. Build the entrypoint then build the image.
 go get -u github.com/tobert/sprok
 go get -u gopkg.in/yaml.v2
 # build the entrypoint binary
-go build
-# build the Docker image
+cd cassandra-docker && go build
+# build the Docker image but there is error
 sudo docker build .
 ```
